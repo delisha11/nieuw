@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <link rel="stylesheet" href="./style/style.css">
+
+    </head> 
+    <body>
+        <h1>Gelieve dit op de laptop te doen, maakt het effect veel mooier!</h1>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Wie maakt meer troep thuis?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media3.giphy.com/media/ILTSSI6tMnZh6TSK99/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Sheila/Ili</button>
+                <button class="btn" id="noButton" onmouseover="moveButton('noButton')">Loelie/Ya</button>
+                <button class="btn" id="noButton1" onmouseover="moveButton('noButton1')">Papa</button>
+                <button class="btn" id="noButton2" onmouseover="moveButton('noButton2')">Mama</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "index2.html";
+                    }
+
+                    function moveButton(buttonId) {
+                        var x = Math.random() * (window.innerWidth - document.getElementById(buttonId).offsetWidth);
+                        var y = Math.random() * (window.innerHeight - document.getElementById(buttonId).offsetHeight);
+                        document.getElementById(buttonId).style.left = `${x}px`;
+                        document.getElementById(buttonId).style.top = `${y}px`;
+
+
+                    }
+                </script> 
+            </div>
+        </div>
+
+    </body> 
+</html>
+
+
